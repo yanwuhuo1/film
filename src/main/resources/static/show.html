@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    <script type="text/javascript" src="bootstrap-5.1.3/js/jquery-3.6.0.js"></script>-->
+    <!--    <script type="text/javascript" src="bootstrap-5.1.3/js/bootstrap.min.js"></script>-->
+    <!--    <link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.min.css">-->
+
+    <!--    &lt;!&ndash; 引入样式 &ndash;&gt;-->
+    <!--    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <!--    &lt;!&ndash; 引入组件库 &ndash;&gt;-->
+    <!--    <script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/show.css">
+</head>
+<body>
+<div class="divinput">
+    <form action="#" method="post">
+        <label for="film_title">搜索:</label>
+        <input type="text" name="film_title" id="film_title" class="sw" style="width: 300px;height: 50px">
+        <input type="submit" onclick="cc()" value="提交" style="height: 50px">
+    </form>
+</div>
+<div class="divsize">
+    <div class="divh">
+        <a href="">
+            <img src="imgs/p2867195909.jpg" class="format" id="format">
+        </a>
+    </div>
+
+    <div class="divh">
+        <a href="https://www.yinfans.me/movie/35304">
+            <img src="imgs/屏幕截图 2022-05-12 180355.png" class="format">
+        </a>
+    </div>
+
+    <div class="divh">
+        <a href="https://www.yinfans.me/movie/35304">
+            <img src="imgs/p2867195909.jpg" class="format">
+        </a>
+    </div>
+    <div class="divh">
+        <a href="https://www.yinfans.me/movie/35304">
+            <img src="imgs/p2867195909.jpg" class="format">
+        </a>
+    </div>
+    <div class="divh">
+        <a href="https://www.yinfans.me/movie/35304">
+            <img src="imgs/p2867195909.jpg" class="format">
+        </a>
+    </div>
+
+
+</div>
+<div>
+
+</div>
+
+<script>
+
+    function f() {
+
+
+    }
+    f()
+
+    function cc() {
+        //获取输入的值
+        var film_title = document.getElementById('film_title').value;
+        //把获取的值格式化
+        var hero = {"film_title": film_title};
+        var url = "";
+        $.post(
+            url,
+            {"data": JSON.stringify(hero)},
+            function (data) {
+                alert("成功" + data);
+            }
+        )
+
+
+    }
+
+</script>
+
+</body>
+</html>
