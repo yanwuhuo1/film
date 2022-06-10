@@ -3,8 +3,6 @@ package com.it.mapper;
 
 import com.it.dao.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -18,11 +16,14 @@ import java.util.List;
  */
 @Mapper
 public interface UserMapper{
+    //查询全部
     List<User> selectUser();
 
-        //根据用户名，密码查询对象
-    User select(@Param("username") String username, @Param("password") String password);
+//查询用户名是否存在
+   User selectName(String name);
 
-    //查询用户名对象
-    User selectByName(String username);
+//添加用户
+    List<User> add();
+
+
 }

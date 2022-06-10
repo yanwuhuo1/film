@@ -20,17 +20,11 @@ class YwhApplicationTests {
 
     @Test
     void contextLoads() {
-        User zs = userMapper.select("ywh", "123");
-        System.out.println("zs = " + zs);
+
     }
     @Test
     void contextLoads2() {
-        User ywh = userMapper.selectByName("ywh1");
-        if (ywh!=null){
-            System.out.println("ywh = " + ywh);
-        }else {
-            System.out.println("错误 ");
-        }
+
     }
 
 }

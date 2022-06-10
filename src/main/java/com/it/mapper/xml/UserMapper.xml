@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.it.mapper.UserMapper">
 
+
     <!--    &lt;!&ndash; 通用查询映射结果 &ndash;&gt;-->
     <!--    <resultMap id="BaseResultMap" type="com.yixin.pojo.User">-->
     <!--        <id column="id" property="id" />-->
@@ -18,14 +19,17 @@
         from user;
     </select>
 
-    <select id="select" resultType="com.it.dao.User">
-        select *
-        from user
-        where username = #{username}
-          and password = #{password};
+
+
+    <select id="selectName" resultType="com.it.dao.User">
+            select * from user where username=#{username}
+
     </select>
-    <select id="selectByName" resultType="com.it.dao.User">
-        select  * from user where username=#{username};
-    </select>
+
+
+
+    <insert id="add">
+        insert into user values (#{username},#{password});
+    </insert>
 
 </mapper>
